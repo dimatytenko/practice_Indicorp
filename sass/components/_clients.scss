@@ -1,0 +1,41 @@
+.clients {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 25px 100px 25px;
+  }
+
+  &__item {
+  }
+
+  &__icon {
+    width: 102px;
+    height: 75px;
+  }
+
+  &__subscribe {
+    position: relative;
+    top: 62px;
+    width: 986px;
+    height: 124px;
+    background-color: $third-backgroun-section;
+    margin: 0 auto;
+    border-radius: 2px;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px;
+  }
+
+  &__subscription-title {
+    font-size: 24px;
+    line-height: 1.33;
+    letter-spacing: 0.1px;
+    color: $font-color-subscribe;
+  }
+  &__back {
+    max-width: 1440px;
+    height: 77px;
+    background-color: $clients-background-section;
+    margin: 0 auto;
+  }
+}

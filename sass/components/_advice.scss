@@ -1,0 +1,32 @@
+.advice {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 230px;
+    height: 340px;
+  }
+  &__block {
+    padding: 30px;
+  }
+
+  &__item-title {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.1px;
+    margin-bottom: 15px;
+  }
+
+  &__item-subscription {
+    font-weight: 500;
+    line-height: 1.43;
+  }
+
+  &__item-img {
+  }
+}

@@ -1,0 +1,58 @@
+.contacts {
+  background-color: $secondary-background-section;
+  &__container {
+    padding-bottom: 150px;
+  }
+
+  &__title {
+  }
+
+  &__subscription {
+    margin-bottom: 80px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    padding: 50px 53px;
+    background-color: $primary-backgroun-section;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:nth-child(even) {
+      background-color: $clients-background-section;
+    }
+  }
+
+  &__icon {
+    width: 72px;
+    height: 72px;
+    fill: $primary-color-icon;
+    margin-bottom: 15px;
+  }
+  &__link {
+    color: inherit;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.71;
+    margin-bottom: 15px;
+  }
+  &__support {
+    color: inherit;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.1px;
+    margin-bottom: 15px;
+  }
+  .btn-modifier {
+    border: 1px solid $font-color-contacts;
+  }
+}
+
+.element-color {
+  fill: $fortith-color-icon;
+  color: $fortith-color-icon;
+}

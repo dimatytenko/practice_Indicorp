@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   height: 793px;
   max-width: 1440px;
   margin: 0 auto;
@@ -6,10 +7,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
   &__menu {
     display: flex;
     align-items: center;
     padding: 40px 0;
+    margin-bottom: 80px;
   }
 
   &__logo {
@@ -26,11 +29,7 @@
     margin-bottom: 80px;
   }
   &__title {
-    font-weight: 800;
-    font-size: 58px;
-    line-height: 1.38;
-    letter-spacing: 0.2px;
-    margin-bottom: 35px;
+    text-align: left;
   }
 
   &__subscription {
@@ -38,7 +37,6 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 1.5;
-    letter-spacing: 0.2px;
     margin-bottom: 35px;
   }
 
@@ -53,30 +51,46 @@
     border-color: $secondary-font-color-btn;
   }
 
-  &__menu-list {
-  }
-
-  &__menu-item {
-  }
-
-  &__menu-link {
-  }
-
-  &__menu-icon {
-  }
-
+  // ==========bottom-section-hero============
   &__list {
+    display: flex;
+    position: absolute;
+    bottom: -30px;
   }
 
   &__item {
+    width: 328px;
+    height: 210px;
+    padding: 35px 0 35px 40px;
+    background-color: $primary-backgroun-section;
+    box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+  }
+  &__item + &__item {
+    margin-left: 30px;
+  }
+  &__icon {
+    width: 48px;
+    height: 48px;
+    fill: $primary-color-icon;
+    margin-bottom: 10px;
   }
 
   &__list-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.33;
+    letter-spacing: 0.1px;
+    margin-bottom: 10px;
   }
 
   &__list-paragraph {
+    color: $second_font-color;
+    font-weight: 500;
+    line-height: 1.43;
   }
 }
+
+// =============navigation=========
 .navigation {
   &__list {
     display: flex;
@@ -89,11 +103,11 @@
   &__link {
     color: $second_font-color;
     font-weight: 600;
-    font-size: 14px;
     line-height: 1.71;
-    letter-spacing: 0.2px;
   }
 }
+
+// =========menu===================
 .menu-list {
   display: flex;
   margin-left: auto;
@@ -118,4 +132,12 @@
     height: 24px;
     fill: $secondary-color-icon;
   }
+}
+// =========modifiers=============
+.secondary-bacground-section-hero {
+  background-color: $secondary-background-color-hero;
+}
+.secondary-color-section-hero {
+  fill: $fortith-color-icon;
+  color: $fortith-color-icon;
 }

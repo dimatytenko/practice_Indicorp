@@ -1,0 +1,56 @@
+.about {
+  &__description {
+    margin-bottom: 100px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__img-box {
+    width: 600px;
+    height: 442px;
+  }
+
+  &__info-box {
+    width: 333px;
+  }
+
+  &__subtitle {
+    text-align: left;
+  }
+
+  &__subdescription {
+    text-align: left;
+  }
+
+  &__list {
+  }
+
+  &__item {
+    display: flex;
+  }
+  &__item + &__item {
+    margin-top: 30px;
+  }
+  &__icon {
+    width: 32px;
+    height: 32px;
+    fill: $third-color-icon;
+    margin-right: 20px;
+  }
+
+  &__item-title {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.1px;
+    margin-bottom: 5px;
+  }
+
+  &__item-description {
+    font-weight: 600;
+    line-height: 1.71;
+    color: $second_font-color;
+  }
+}

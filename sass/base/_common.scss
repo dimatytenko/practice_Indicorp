@@ -1,6 +1,11 @@
 body {
   font-family: $main_font;
-  background-color: #e5e5e5;
+  color: $main_font-color;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  font-size: 14px;
+  line-height: 1.71;
+  background-color: $primary-backgroun-section;
 }
 /* CБРОСЫ */
 h1,
@@ -29,10 +34,12 @@ img {
   max-width: 100%;
   height: auto;
 }
+button {
+  cursor: pointer;
+}
 
 .button-hero {
   padding: 10px 36px;
-  font-weight: 700;
   font-size: 14px;
   line-height: 2;
   letter-spacing: 0.2px;
@@ -40,4 +47,28 @@ img {
   border: 0;
   outline: 0;
   background: transparent;
+}
+.button-contacts-hero {
+  padding: 10px 20px;
+  color: $color-secondary-button;
+  font-weight: 600;
+  line-height: 1.71;
+  border: 1px solid $third-color-icon;
+  border-radius: 5px;
+  background: transparent;
+}
+
+.title {
+  font-size: 40px;
+  line-height: 1.42;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.paragraph {
+  color: $second_font-color;
+  font-weight: 500;
+  line-height: 1.43;
+  text-align: center;
+  margin-bottom: 50px;
 }
