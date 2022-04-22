@@ -1,0 +1,121 @@
+.header {
+  height: 793px;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-image: url('../../images/hero/hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &__menu {
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+  }
+
+  &__logo {
+    color: inherit;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.33;
+    letter-spacing: 0.1px;
+    margin-right: 117px;
+  }
+
+  &__box {
+    max-width: 510px;
+    margin-bottom: 80px;
+  }
+  &__title {
+    font-weight: 800;
+    font-size: 58px;
+    line-height: 1.38;
+    letter-spacing: 0.2px;
+    margin-bottom: 35px;
+  }
+
+  &__subscription {
+    color: $second_font-color;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+    margin-bottom: 35px;
+  }
+
+  &__button-get {
+    color: $primary-font-color-btn;
+    background: $background-button;
+  }
+
+  &__button-more {
+    color: $secondary-font-color-btn;
+    border: 1px solid #00a0c1;
+    border-color: $secondary-font-color-btn;
+  }
+
+  &__menu-list {
+  }
+
+  &__menu-item {
+  }
+
+  &__menu-link {
+  }
+
+  &__menu-icon {
+  }
+
+  &__list {
+  }
+
+  &__item {
+  }
+
+  &__list-title {
+  }
+
+  &__list-paragraph {
+  }
+}
+.navigation {
+  &__list {
+    display: flex;
+  }
+
+  &__item + &__item {
+    margin-left: 20px;
+  }
+
+  &__link {
+    color: $second_font-color;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.2px;
+  }
+}
+.menu-list {
+  display: flex;
+  margin-left: auto;
+
+  &__item {
+  }
+  &__item + &__item {
+    margin-left: 30px;
+  }
+
+  &__link {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    fill: $secondary-color-icon;
+  }
+}
