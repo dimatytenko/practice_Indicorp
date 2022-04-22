@@ -6,9 +6,21 @@
   }
 
   &__center {
-    // background-color: $third-backgroun-section;
-    background-color: #000;
-    // max-width: 1440px;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: $third-backgroun-section;
+  }
+  &__bottom {
+    display: flex;
+    padding: 25px 0;
+  }
+
+  &__bottom-paragraph {
+    font-weight: 600;
+    color: $second_font-color;
+  }
+
+  &__social-list {
   }
   &__title {
     font-size: 24px;
@@ -62,17 +74,11 @@
     font-weight: 600;
   }
 }
-&__bottom {
-  display: flex;
-}
-
-&__bottom-paragraph {
-}
-
-&__social-list {
-}
 .social-list {
-  &__item {
+  display: flex;
+  margin-left: auto;
+  &__item + &__item {
+    margin-left: 20px;
   }
 
   &__link {
