@@ -162,7 +162,7 @@ button {
   margin: 0 auto;
 }
 .header__item {
-  width: 328px;
+  max-width: 328px;
   height: 210px;
   padding: 35px 0 35px 40px;
   background-color: #fafafa;
@@ -352,7 +352,7 @@ button {
   flex-direction: column;
   justify-content: space-between;
   background-color: #ffffff;
-  width: 230px;
+  max-width: 230px;
   height: 340px;
 }
 .advice__block {
@@ -368,6 +368,7 @@ button {
   font-weight: 500;
   line-height: 1.43;
 }
+
 @media screen and (min-width: 1080px) {
   .advice {
     background-color: #ffffff;

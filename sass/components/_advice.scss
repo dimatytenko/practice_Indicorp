@@ -15,7 +15,7 @@
     flex-direction: column;
     justify-content: space-between;
     background-color: $primary-background-color-hero;
-    width: 230px;
+    max-width: 230px;
     height: 340px;
   }
   &__block {
@@ -32,9 +32,6 @@
   &__item-subscription {
     font-weight: 500;
     line-height: 1.43;
-  }
-
-  &__item-img {
   }
 }
 @media screen and (min-width: 1080px) {
