@@ -1,35 +1,29 @@
 .header {
-  position: relative;
-  height: 793px;
-  max-width: 1440px;
-  margin: 0 auto;
-  background-image: url('../../images/hero/hero.jpg');
+  max-width: 414px;
+  height: 2026px;
+  background-color: $primary-background-color-hero;
+  background-image: url('../images/hero/background.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
+  margin: 0 auto;
   &__menu {
     display: flex;
-    align-items: center;
-    padding: 40px 0;
-    margin-bottom: 80px;
+    padding: 40px 0 90px 0;
   }
 
   &__logo {
     color: inherit;
-    font-weight: 700;
     font-size: 24px;
     line-height: 1.33;
     letter-spacing: 0.1px;
-    margin-right: 117px;
   }
 
   &__box {
-    max-width: 510px;
-    margin-bottom: 80px;
+    padding: 80px 0 100px 0;
   }
   &__title {
-    text-align: left;
+    margin-bottom: 40px;
   }
 
   &__subscription {
@@ -37,26 +31,26 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 1.5;
-    margin-bottom: 35px;
+    margin-bottom: 80px;
   }
 
   &__button-get {
     color: $primary-font-color-btn;
     background: $background-button;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 25px;
   }
 
   &__button-more {
     color: $secondary-font-color-btn;
     border: 1px solid #00a0c1;
     border-color: $secondary-font-color-btn;
+    display: block;
+    margin: 0 auto;
   }
 
   // ==========bottom-section-hero============
-  &__list {
-    display: flex;
-    position: absolute;
-    bottom: -30px;
-  }
 
   &__item {
     width: 328px;
@@ -66,7 +60,7 @@
     box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
   }
   &__item + &__item {
-    margin-left: 30px;
+    margin-top: $gap-primary;
   }
   &__icon {
     width: 48px;
@@ -76,7 +70,6 @@
   }
 
   &__list-title {
-    font-weight: 700;
     font-size: 24px;
     line-height: 1.33;
     letter-spacing: 0.1px;
@@ -91,19 +84,28 @@
 }
 
 // =============navigation=========
+.nav {
+  display: none;
+}
 .navigation {
+  padding-bottom: 100px;
   &__list {
     display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__item + &__item {
-    margin-left: 20px;
+    margin-top: $gap-primary;
+  }
+  &__item {
   }
 
   &__link {
     color: $second_font-color;
-    font-weight: 600;
-    line-height: 1.71;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.5;
   }
 }
 
@@ -115,16 +117,7 @@
   &__item {
   }
   &__item + &__item {
-    margin-left: 30px;
-  }
-
-  &__link {
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-left: $gap-secondary;
   }
 
   &__icon {
@@ -133,6 +126,71 @@
     fill: $secondary-color-icon;
   }
 }
+@media screen and (min-width: 1080px) {
+  .header {
+    height: 793px;
+    max-width: 1440px;
+    background-image: url('../images/hero/hero.jpg');
+
+    &__menu {
+      align-items: baseline;
+      padding-bottom: 40px;
+    }
+
+    &__logo {
+      margin-right: 117px;
+    }
+
+    &__box {
+      max-width: 510px;
+    }
+
+    &__title {
+      text-align: left;
+      margin-bottom: 35px;
+    }
+
+    &__subscription {
+      margin-bottom: 35px;
+    }
+
+    &__button-get {
+      display: inline;
+      margin-right: 10px;
+    }
+
+    &__button-more {
+      display: inline;
+    }
+
+    &__list {
+      display: flex;
+    }
+    &__item + &__item {
+      margin-top: 0;
+      margin-left: $gap-primary;
+    }
+  }
+  .nav {
+    display: block;
+    &__list {
+      display: flex;
+    }
+
+    &__item + &__item {
+      margin-left: $gap-primary;
+    }
+    &__link {
+      color: $second_font-color;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+  }
+  .navigation {
+    display: none;
+  }
+}
+
 // =========modifiers=============
 .secondary-bacground-section-hero {
   background-color: $secondary-background-color-hero;

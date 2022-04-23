@@ -25,12 +25,12 @@
       <div class="container">
         <div class="header__menu">
           <a href="#" class="header__logo">Indicorp</a>
-          <nav class="header__nav navigation">
-            <ul class="navigation__list">
-              <li class="navigation__item"><a href="#" class="navigation__link">Home</a></li>
-              <li class="navigation__item"><a href="#" class="navigation__link">Product</a></li>
-              <li class="navigation__item"><a href="#" class="navigation__link">Pricing</a></li>
-              <li class="navigation__item"><a href="#" class="navigation__link">Contact</a></li>
+          <nav class="header__nav nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Product</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Pricing</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
             </ul>
           </nav>
           <ul class="header__menu-list menu-list">
@@ -57,10 +57,19 @@
             </li>
           </ul>
         </div>
+        <nav class="header__nav navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item"><a href="#" class="navigation__link">Home</a></li>
+            <li class="navigation__item"><a href="#" class="navigation__link">Product</a></li>
+            <li class="navigation__item"><a href="#" class="navigation__link">Pricing</a></li>
+            <li class="navigation__item"><a href="#" class="navigation__link">Contact</a></li>
+          </ul>
+        </nav>
         <div class="header__box">
           <h1 class="header__title title">EMPOWER YOUR BUSINESS</h1>
           <p class="header__subscription">
-            We know how large objects will act, but things on a small scale.
+            We know how large objects will act, <br />
+            but things on a small scale.
           </p>
           <button class="header__button-get button-hero" type="button">Get Quote Now</button>
           <button class="header__button-more button-hero" type="button">Learn More</button>
@@ -203,8 +212,7 @@
           <div class="about__wrapper">
             <div class="about__img-box">
               <iframe
-                width="560"
-                height="315"
+                class="about__video"
                 src="https://www.youtube.com/embed/K4TOrB7at0Y"
                 title="YouTube video player"
                 frameborder="0"
@@ -501,6 +509,5 @@
         </ul>
       </div>
     </footer>
-    <script type="module" src="./js/index.js "></script>
   </body>
 </html>

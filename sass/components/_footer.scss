@@ -1,8 +1,6 @@
 .footer {
   &__top {
     padding: 40px 0;
-    display: flex;
-    justify-content: space-between;
   }
 
   &__center {
@@ -11,16 +9,13 @@
     background-color: $third-backgroun-section;
   }
   &__bottom {
-    display: flex;
     padding: 25px 0;
   }
 
   &__bottom-paragraph {
     font-weight: 600;
     color: $second_font-color;
-  }
-
-  &__social-list {
+    text-align: left;
   }
   &__title {
     font-size: 24px;
@@ -31,21 +26,18 @@
 
   &__subscription {
     text-align-last: left;
-    margin-bottom: 0;
+    margin-bottom: 50px;
   }
   &__btn {
+    text-align: center;
     color: $third-font-color;
     background-color: $background-button;
+    display: block;
     padding: 15px 40px;
   }
 }
 .info-block {
   padding: 50px 0;
-  display: flex;
-  justify-content: space-between;
-  &__wrapper {
-  }
-
   &__title {
     font-size: 16px;
     line-height: 1.5;
@@ -53,12 +45,11 @@
     color: $third-font-color;
     margin-bottom: 20px;
   }
-
-  &__list {
+  &__item + &__item {
+    margin-top: 10px;
   }
-
-  &__item {
-    margin-bottom: 10px;
+  &__item:last-child {
+    margin-bottom: $gap-primary;
   }
   &__icon {
     position: relative;
@@ -76,12 +67,8 @@
 }
 .social-list {
   display: flex;
-  margin-left: auto;
   &__item + &__item {
     margin-left: 20px;
-  }
-
-  &__link {
   }
 
   &__icon {
@@ -92,4 +79,26 @@
 .link-modifier {
   position: relative;
   bottom: 8px;
+}
+@media screen and (min-width: 1080px) {
+  .footer {
+    &__top {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__bottom {
+      display: flex;
+    }
+    &__subscription {
+      margin-bottom: unset;
+    }
+  }
+
+  .info-block {
+    display: flex;
+    justify-content: space-between;
+  }
+  .social-list {
+    margin-left: auto;
+  }
 }

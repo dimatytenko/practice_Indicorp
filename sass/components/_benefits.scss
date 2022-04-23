@@ -1,19 +1,17 @@
 .benefits {
-  &__container {
-    padding-top: 210px;
+  background-color: $secondary-background-section;
+
+  &__title {
   }
 
-  &__list {
-    display: flex;
-    justify-content: center;
-  }
   &__item {
     padding: 30px 40px;
     text-align: center;
+    background-color: $primary-background-color-hero;
   }
 
   &__item + &__item {
-    margin-left: 30px;
+    margin-top: $gap-primary;
   }
 
   &__icon {
@@ -35,5 +33,22 @@
     font-size: 16px;
     line-height: 1.5;
     text-align: center;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .benefits {
+    background-color: $primary-background-color-hero;
+
+    &__container {
+      padding-top: 210px;
+    }
+    &__list {
+      display: flex;
+      justify-content: center;
+    }
+    &__item + &__item {
+      margin-top: 0;
+      margin-left: $gap-primary;
+    }
   }
 }

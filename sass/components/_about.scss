@@ -3,18 +3,14 @@
     margin-bottom: 100px;
   }
 
-  &__wrapper {
-    display: flex;
-    justify-content: space-between;
-  }
-
   &__img-box {
-    width: 600px;
-    height: 442px;
+    margin-bottom: 50px;
   }
-
-  &__info-box {
+  &__video {
+    display: block;
+    margin: 0 auto;
     width: 333px;
+    height: 442px;
   }
 
   &__subtitle {
@@ -23,9 +19,6 @@
 
   &__subdescription {
     text-align: left;
-  }
-
-  &__list {
   }
 
   &__item {
@@ -52,5 +45,25 @@
     font-weight: 600;
     line-height: 1.71;
     color: $second_font-color;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .about {
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__img-box {
+      margin-bottom: unset;
+    }
+    &__video {
+      display: block;
+      margin: 0 auto;
+      width: 600px;
+      // height: 442px;
+    }
+    &__info-box {
+      max-width: 333px;
+    }
   }
 }

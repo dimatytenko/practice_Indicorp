@@ -4,17 +4,13 @@
     padding-bottom: 150px;
   }
 
-  &__title {
-  }
-
   &__subscription {
     margin-bottom: 80px;
   }
 
-  &__list {
-    display: flex;
+  &__item + &__item {
+    margin-top: $gap-primary;
   }
-
   &__item {
     padding: 50px 53px;
     background-color: $primary-backgroun-section;
@@ -55,4 +51,14 @@
 .element-color {
   fill: $fortith-color-icon;
   color: $fortith-color-icon;
+}
+@media screen and (min-width: 1080px) {
+  .contacts {
+    &__list {
+      display: flex;
+    }
+    &__item + &__item {
+      margin-top: unset;
+    }
+  }
 }
