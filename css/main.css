@@ -116,7 +116,7 @@ button {
 }
 .header {
   max-width: 414px;
-  height: 2026px;
+  min-height: 2026px;
   background-color: #ffffff;
   background-image: url("../images/hero/background.png");
   background-repeat: no-repeat;
@@ -135,7 +135,7 @@ button {
   letter-spacing: 0.1px;
 }
 .header__box {
-  padding: 80px 0 100px 0;
+  padding: 80px 0;
 }
 .header__title {
   margin-bottom: 40px;
@@ -164,7 +164,7 @@ button {
 .header__item {
   max-width: 328px;
   height: 210px;
-  padding: 35px 0 35px 40px;
+  padding: 35px 40px 35px 40px;
   background-color: #fafafa;
   box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
 }
@@ -226,7 +226,8 @@ button {
 
 @media screen and (min-width: 1080px) {
   .header {
-    height: 793px;
+    position: relative;
+    min-height: 793px;
     max-width: 1440px;
     background-image: url("../images/hero/hero.jpg");
   }
@@ -239,6 +240,7 @@ button {
   }
   .header__box {
     max-width: 510px;
+    padding-bottom: 275px;
   }
   .header__title {
     text-align: left;
@@ -250,12 +252,16 @@ button {
   .header__button-get {
     display: inline;
     margin-right: 10px;
+    margin-bottom: 0;
   }
   .header__button-more {
     display: inline;
+    margin-bottom: 0;
   }
   .header__list {
     display: flex;
+    position: absolute;
+    bottom: -20px;
   }
   .header__item + .header__item {
     margin-top: 0;
@@ -471,22 +477,24 @@ button {
   .clients__list {
     flex-direction: row;
     justify-content: space-between;
-    padding: 50px 25px 10px 25px;
+    padding: 10px 25px;
   }
   .clients__item {
     margin-bottom: unset;
   }
   .clients__subscribe {
+    margin: 0;
     position: relative;
-    top: 60px;
-    width: 986px;
+    bottom: -60px;
+    max-width: 986px;
     height: 124px;
     display: flex;
     justify-content: space-between;
+    padding: 0 25px;
   }
   .clients__back {
     max-width: 1440px;
-    height: 77px;
+    height: 80px;
     background-color: #252b42;
     margin: 0 auto;
   }

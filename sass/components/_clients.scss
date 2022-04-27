@@ -35,23 +35,25 @@
     &__list {
       flex-direction: row;
       justify-content: space-between;
-      padding: 50px 25px 10px 25px;
+      padding: 10px 25px;
     }
     &__item {
       margin-bottom: unset;
     }
     &__subscribe {
+      margin: 0;
       position: relative;
-      top: 60px;
-      width: 986px;
+      bottom: -60px;
+      max-width: 986px;
       height: 124px;
       display: flex;
       justify-content: space-between;
+      padding: 0 25px;
     }
 
     &__back {
       max-width: 1440px;
-      height: 77px;
+      height: 80px;
       background-color: $clients-background-section;
       margin: 0 auto;
     }
