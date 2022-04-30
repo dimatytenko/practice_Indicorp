@@ -133,6 +133,11 @@ button {
   font-size: 24px;
   line-height: 1.33;
   letter-spacing: 0.1px;
+  transition-property: transform;
+  transition-duration: 1000ms;
+}
+.header__logo:hover, .header__logo:focus {
+  transform: translateY(20px);
 }
 .header__box {
   padding: 80px 0;
@@ -153,6 +158,12 @@ button {
   display: block;
   margin: 0 auto;
   margin-bottom: 25px;
+  transition: color, background, transform 700ms linear;
+}
+.header__button-get:hover, .header__button-get:focus {
+  color: #ffa62b;
+  background: #00a0c1;
+  transform: translateY(-5px);
 }
 .header__button-more {
   color: #00a0c1;
@@ -160,6 +171,12 @@ button {
   border-color: #00a0c1;
   display: block;
   margin: 0 auto;
+  transition: color, background, transform 700ms linear;
+}
+.header__button-more:hover, .header__button-more:focus {
+  color: #ffa62b;
+  background: #00a0c1;
+  transform: translateY(-5px);
 }
 .header__item {
   max-width: 328px;
@@ -204,19 +221,41 @@ button {
 .navigation__item + .navigation__item {
   margin-top: 30px;
 }
+.navigation__item {
+  transition: transform 700ms linear;
+}
+.navigation__item:hover, .navigation__item:focus {
+  transform: scale(scale(1.3, 1.3), scale(1.3, 1.3));
+}
 .navigation__link {
   color: #737373;
   font-weight: 400;
   font-size: 30px;
   line-height: 1.5;
+  transition: color 700ms linear;
+}
+.navigation__link:hover, .navigation__link:focus {
+  color: #ffa62b;
 }
 
 .menu-list {
   display: flex;
   margin-left: auto;
 }
+.menu-list__item {
+  transition: transform 700ms linear;
+}
+.menu-list__item:hover, .menu-list__item:focus {
+  transform: scale(1.3, 1.3);
+}
 .menu-list__item + .menu-list__item {
   margin-left: 20px;
+}
+.menu-list__icon {
+  transition: fill 700ms linear;
+}
+.menu-list__icon:hover, .menu-list__icon:focus {
+  fill: #ffa62b;
 }
 .menu-list__icon {
   width: 24px;
@@ -277,10 +316,20 @@ button {
   .nav__item + .nav__item {
     margin-left: 30px;
   }
+  .nav__item {
+    transition: transform 700ms linear;
+  }
+  .nav__item:hover, .nav__item:focus {
+    transform: scale(1.3, 1.3);
+  }
   .nav__link {
     color: #737373;
     font-weight: 400;
     line-height: 1.5;
+    transition: color 700ms linear;
+  }
+  .nav__link:hover, .nav__link:focus {
+    color: #ffa62b;
   }
 
   .navigation {

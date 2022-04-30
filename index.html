@@ -18,13 +18,22 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <header class="header">
       <div class="container">
         <div class="header__menu">
-          <a href="#" class="header__logo">Indicorp</a>
+          <a
+            href="#"
+            data-aos="fade-right"
+            data-aos-anchor="#example-anchor"
+            data-aos-offset="500"
+            data-aos-duration="1500"
+            class="header__logo"
+            >Indicorp</a
+          >
           <nav class="header__nav nav">
             <ul class="nav__list">
               <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
@@ -75,7 +84,13 @@
           <button class="header__button-more button-hero" type="button">Learn More</button>
         </div>
         <ul class="header__list">
-          <li class="header__item">
+          <li
+            class="header__item"
+            data-aos="fade-right"
+            data-aos-anchor="#example-anchor"
+            data-aos-offset="500"
+            data-aos-duration="1500"
+          >
             <svg class="header__icon">
               <use href="./images/icons.svg#icon-benefits-4"></use>
             </svg>
@@ -85,7 +100,13 @@
               meeting you where you work.
             </p>
           </li>
-          <li class="header__item">
+          <li
+            class="header__item"
+            data-aos="flip-up"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="1500"
+          >
             <svg class="header__icon">
               <use href="./images/icons.svg#icon-hero-2"></use>
             </svg>
@@ -95,7 +116,13 @@
               and we'll get you there.
             </p>
           </li>
-          <li class="header__item secondary-bacground-section-hero">
+          <li
+            class="header__item secondary-bacground-section-hero"
+            data-aos="fade-left"
+            data-aos-anchor="#example-anchor"
+            data-aos-offset="500"
+            data-aos-duration="1500"
+          >
             <svg class="header__icon secondary-color-section-hero">
               <use href="./images/icons.svg#icon-hero-3"></use>
             </svg>
@@ -111,7 +138,13 @@
     <main>
       <section class="benefits">
         <div class="container section benefits__container">
-          <h2 class="benefits__title title">WHY CHOOSE US</h2>
+          <h2
+            class="benefits__title title"
+            data-aos="fade-up"
+            data-aos-anchor-placement="bottom-center"
+          >
+            WHY CHOOSE US
+          </h2>
           <p class="benefits__description paragraph">
             Problems trying to resolve the conflict between the two major realms <br />
             of Classical physics: Newtonian mechanics
@@ -150,7 +183,13 @@
       </section>
       <section class="advice">
         <div class="container section">
-          <h2 class="advice__title title">Practice Advice</h2>
+          <h2
+            class="advice__title title"
+            data-aos="fade-up"
+            data-aos-anchor-placement="bottom-center"
+          >
+            Practice Advice
+          </h2>
           <p class="advice__description paragraph">
             Problems trying to resolve the conflict between <br />
             the two major realms of Classical physics: Newtonian mechanics
@@ -200,7 +239,11 @@
       </section>
       <section class="about">
         <div class="container section">
-          <h2 class="about__title title">
+          <h2
+            class="about__title title"
+            data-aos="fade-up"
+            data-aos-anchor-placement="bottom-center"
+          >
             We are providing best <br />
             business service.
           </h2>
@@ -251,7 +294,13 @@
       </section>
       <section class="clients">
         <div class="container clients__container">
-          <h2 class="clients__title visually-hidden">Clients</h2>
+          <h2
+            class="clients__title visually-hidden"
+            data-aos="fade-up"
+            data-aos-anchor-placement="bottom-center"
+          >
+            Clients
+          </h2>
           <ul class="clients__list">
             <li class="clients__item">
               <a href="#" class="clients__link">
@@ -308,7 +357,13 @@
       </section>
       <section class="contacts">
         <div class="container section contacts__container">
-          <h2 class="contacts__title title">Get In Touch</h2>
+          <h2
+            class="contacts__title title"
+            data-aos="fade-up"
+            data-aos-anchor-placement="bottom-center"
+          >
+            Get In Touch
+          </h2>
           <p class="contacts__subscription paragraph">
             Problems trying to resolve the conflict between <br />
             the two major realms of Classical physics: Newtonian mechanics
@@ -509,5 +564,9 @@
         </ul>
       </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
