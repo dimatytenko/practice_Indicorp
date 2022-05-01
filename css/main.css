@@ -105,7 +105,8 @@ button {
   }
 }
 .section {
-  padding: 80px 0;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 @media screen and (min-width: 1080px) {
@@ -286,7 +287,7 @@ button {
 .hero__item {
   padding: 35px 40px;
   background-color: #fafafa;
-  box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+  box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.25);
 }
 .hero__item + .hero__item {
   margin-top: 30px;
@@ -343,12 +344,31 @@ button {
     bottom: -20px;
   }
   .hero__item {
+    position: relative;
+    overflow: hidden;
     width: 328px;
     height: 210px;
+    border-radius: 5px;
   }
   .hero__item + .hero__item {
     margin-top: 0;
     margin-left: 30px;
+  }
+  .hero__item-text-more {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(100%);
+    width: 100%;
+    height: 100%;
+    background-color: #00a0c1;
+    color: #ffffff;
+    padding: 30px;
+    transition: 700ms linear;
+    overflow: auto;
+  }
+  .hero__item:hover .hero__item-text-more {
+    transform: translateY(0);
   }
 }
 .secondary-bacground-section-hero {
@@ -360,11 +380,15 @@ button {
   color: #ffffff;
 }
 
+.secondary-light-box-color {
+  background-color: #ffffff;
+  color: #252b42;
+}
+
 .benefits {
   background-color: #f3f3f3;
 }
 .benefits__item {
-  padding: 30px 40px;
   text-align: center;
   background-color: #ffffff;
 }
@@ -721,4 +745,28 @@ button {
   .social-list {
     margin-left: auto;
   }
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(106, 104, 104, 0.452);
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  min-height: 450px;
+  background-color: #fafafa;
+  border-radius: 5px;
 }/*# sourceMappingURL=main.css.map */

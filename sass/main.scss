@@ -3,11 +3,13 @@
 @import './base/common';
 @import './base/container';
 @import './base/section';
-@import './components/header';
+@import './layout/header';
 @import './components/hero';
 @import './components/benefits';
 @import './components/advice';
 @import './components/about';
 @import './components/clients';
 @import './components/contacts';
-@import './components/footer';
+@import './layout/footer';
+@import './layout/_backdrop';
+@import './layout/modal';
