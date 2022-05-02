@@ -59,6 +59,8 @@
   // ==========bottom-section-hero============
 
   &__item {
+    position: relative;
+    overflow: hidden;
     padding: 35px 40px;
     background-color: $primary-backgroun-section;
     box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.25);
@@ -66,6 +68,22 @@
 
   &__item + &__item {
     margin-top: $gap-primary;
+  }
+  &__item-text-more {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(100%);
+    width: 100%;
+    height: 100%;
+    background-color: $secondary-background-color-hero;
+    color: $fortith-color-icon;
+    padding: $gap-primary;
+    transition: $transition-primary;
+    overflow: auto;
+  }
+  &__item:hover &__item-text-more {
+    transform: translateY(0);
   }
   &__icon {
     width: 48px;
@@ -130,8 +148,6 @@
       bottom: -20px;
     }
     &__item {
-      position: relative;
-      overflow: hidden;
       width: 328px;
       height: 210px;
       border-radius: 5px;
@@ -139,22 +155,6 @@
     &__item + &__item {
       margin-top: 0;
       margin-left: $gap-primary;
-    }
-    &__item-text-more {
-      position: absolute;
-      left: 0;
-      top: 0;
-      transform: translateY(100%);
-      width: 100%;
-      height: 100%;
-      background-color: $secondary-background-color-hero;
-      color: $fortith-color-icon;
-      padding: $gap-primary;
-      transition: $transition-primary;
-      overflow: auto;
-    }
-    &__item:hover &__item-text-more {
-      transform: translateY(0);
     }
   }
 }

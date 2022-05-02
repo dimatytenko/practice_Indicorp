@@ -71,3 +71,36 @@ button {
   text-align: center;
   margin-bottom: 50px;
 }
+
+// ===== button-close==========
+
+.button-close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover,
+  &:focus {
+    background-color: $color-hover-secondary;
+  }
+
+  &__icon-close {
+    width: 20px;
+    height: 20px;
+    fill: $secondary-color-icon;
+  }
+
+  &:hover &__icon-close {
+    fill: $color-hover-primary;
+  }
+}
+// =================================
