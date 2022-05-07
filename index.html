@@ -138,6 +138,7 @@
             <button
               class="hero__button-more button-hero"
               type="button"
+              data-action="btn-learn-more"
             >
               Learn More
             </button>
@@ -845,12 +846,15 @@
         </ul>
       </div>
     </footer>
-    <!-- <div class="backdrop is-hidden"> -->
+    <!-- backdrop -->
     <div
       class="backdrop is-hidden"
       data-action="backdrop"
     ></div>
-    <div class="modal" data-action="modal">
+    <!-- ======================== -->
+
+    <!-- Modal -->
+    <div class="modal is-hidden" data-action="modal">
       <button
         class="button-close"
         type="modal"
@@ -869,36 +873,49 @@
             class="modal__input"
             type="text"
             name="user-name"
+            id="user-name"
             placeholder="Djavelin"
             minlength="3"
             required
             autofocus
           />
         </div>
-        <div>
-          <label for="user-surname">Surname</label>
+        <div class="modal__input-field">
+          <label class="modal__label" for="user-surname"
+            >Surname</label
+          >
           <input
+            class="modal__input"
             type="text"
             name="user-surname"
+            id="user-surname"
             placeholder="Bandera"
             minlength="3"
             required
           />
         </div>
-        <div>
-          <label for="user-email">Email</label>
+        <div class="modal__input-field">
+          <label class="modal__label" for="user-email"
+            >Email</label
+          >
           <input
+            class="modal__input"
             type="email"
             name="user-email"
+            id="user-email"
             placeholder="name@mail.com"
             title="name@mail.com"
           />
         </div>
-        <div>
-          <label for="user-tel">Number phone</label>
+        <div class="modal__input-field">
+          <label class="modal__label" for="user-tel"
+            >Number phone</label
+          >
           <input
+            class="modal__input"
             type="tel"
             name="user-tel"
+            id="user-tel"
             required
             placeholder="095-666-88-99"
             title="095-666-88-99"
@@ -907,11 +924,45 @@
             pattern="^\d{3}-\d{3}-\d{2}-\d{2}$"
           />
         </div>
-        <button class="button-contacts-hero" type="submit">
+        <button
+          class="modal__button-send button-contacts-hero"
+          type="submit"
+          data-action="modal-button-send"
+        >
           Send
         </button>
       </form>
     </div>
+    <!-- ======================== -->
+
+    <!-- modal-learn-more -->
+    <div
+      class="learn-more is-hidden"
+      data-action="learn-more"
+    >
+      <h3 class="learn-more__title title">About</h3>
+      <p class="learn-more__description paragraph">
+        Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Reiciendis, blanditiis deleniti? Alias
+        accusantium modi illum. Enim iste ut corporis
+        aspernatur?
+      </p>
+      <p class="learn-more__description paragraph">
+        Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Velit culpa, maiores accusantium suscipit
+        reiciendis vel, provident deserunt numquam
+        voluptatem unde, neque mollitia ipsum beatae eos.
+      </p>
+      <p class="learn-more__description paragraph">
+        Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Nesciunt sit ducimus, eligendi fuga explicabo
+        nemo quis provident ad, in laudantium eaque animi
+        velit saepe doloremque dolorum eum odio repellat
+        quisquam?
+      </p>
+    </div>
+    <!-- ======================== -->
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();

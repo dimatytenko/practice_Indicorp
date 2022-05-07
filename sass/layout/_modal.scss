@@ -1,11 +1,61 @@
 .modal {
   position: fixed;
+  z-index: 1000;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 346px;
-  min-height: 450px;
+  min-height: 450p;
   background-color: $primary-backgroun-section;
   border-radius: 5px;
   padding: 40px;
+
+  &__form {
+    padding: 15px;
+    border: solid 1px;
+    border-color: #000;
+    border-radius: 5px;
+  }
+
+  &__input-field {
+  }
+
+  &__label {
+    margin-bottom: 10px;
+  }
+
+  &__input {
+    margin-bottom: 10px;
+    width: 100%;
+    border: solid 1px;
+    border-radius: 5px;
+    padding-left: 10px;
+
+    &:valid {
+      border-color: greenyellow;
+    }
+
+    &:invalid {
+      border-color: red;
+    }
+    &:placeholder-shown {
+      border: solid 1px;
+      border-color: gray;
+    }
+  }
+
+  &__button-send {
+    display: block;
+    margin: 0 auto;
+    transition: color $transition-primary,
+      background-color $transition-primary,
+      border-color $transition-primary;
+
+    &:hover,
+    &:focus {
+      background-color: $secondary-background-color-hero;
+      color: $primary-font-color-btn;
+      border-color: $secondary-background-color-hero;
+    }
+  }
 }

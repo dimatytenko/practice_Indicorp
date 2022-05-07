@@ -1,0 +1,15 @@
+.learn-more {
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 346px;
+  min-height: 450p;
+  background-color: $primary-backgroun-section;
+  border-radius: 5px;
+  padding: 40px;
+  @media screen and (min-width: 1080px) {
+    width: 900px;
+  }
+}

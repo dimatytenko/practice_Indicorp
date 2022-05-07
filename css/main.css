@@ -104,6 +104,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 700ms linear;
 }
 
 .button-close:hover, .button-close:focus {
@@ -114,6 +115,7 @@ button {
   width: 20px;
   height: 20px;
   fill: #737373;
+  transition: fill 700ms linear;
 }
 
 .button-close:hover .button-close__icon-close {
@@ -857,6 +859,7 @@ button {
 
 .backdrop {
   position: fixed;
+  z-index: 999;
   top: 0;
   width: 100vw;
   height: 100vh;
@@ -871,13 +874,77 @@ button {
 
 .modal {
   position: fixed;
+  z-index: 1000;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 346px;
-  min-height: 450px;
+  min-height: 450p;
   background-color: #fafafa;
   border-radius: 5px;
   padding: 40px;
+}
+
+.modal__form {
+  padding: 15px;
+  border: solid 1px;
+  border-color: #000;
+  border-radius: 5px;
+}
+
+.modal__label {
+  margin-bottom: 10px;
+}
+
+.modal__input {
+  margin-bottom: 10px;
+  width: 100%;
+  border: solid 1px;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.modal__input:valid {
+  border-color: greenyellow;
+}
+
+.modal__input:invalid {
+  border-color: red;
+}
+
+.modal__input:placeholder-shown {
+  border: solid 1px;
+  border-color: gray;
+}
+
+.modal__button-send {
+  display: block;
+  margin: 0 auto;
+  transition: color 700ms linear, background-color 700ms linear, border-color 700ms linear;
+}
+
+.modal__button-send:hover, .modal__button-send:focus {
+  background-color: #00a0c1;
+  color: #ffffff;
+  border-color: #00a0c1;
+}
+
+.learn-more {
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 346px;
+  min-height: 450p;
+  background-color: #fafafa;
+  border-radius: 5px;
+  padding: 40px;
+}
+
+@media screen and (min-width: 1080px) {
+  .learn-more {
+    width: 900px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
