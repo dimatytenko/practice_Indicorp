@@ -168,11 +168,24 @@ button {
   margin-bottom: 75px;
 }
 
+.header__logo-div {
+  transition: transform 700ms linear;
+}
+
+.header__logo-div:hover, .header__logo-div:focus-within {
+  transform: scale(1.3, 1.3);
+}
+
 .header__logo {
   color: inherit;
   font-size: 24px;
   line-height: 1.33;
   letter-spacing: 0.1px;
+  transition: color 700ms linear;
+}
+
+.header__logo:hover, .header__logo:focus {
+  color: #ffa62b;
 }
 
 .menu-list {
@@ -188,7 +201,7 @@ button {
   transition: transform 700ms linear;
 }
 
-.menu-list__item:hover, .menu-list__item:focus {
+.menu-list__item:hover, .menu-list__item:focus-within {
   transform: scale(1.3, 1.3);
 }
 
@@ -196,13 +209,15 @@ button {
   width: 24px;
   height: 24px;
   fill: #737373;
-}
-
-.menu-list__icon {
   transition: fill 700ms linear;
 }
 
-.menu-list__icon:hover, .menu-list__icon:focus {
+.menu-list__item:hover,
+.menu-list__item:focus-within .menu-list__icon {
+  fill: #ffa62b;
+}
+
+.menu-list__icon:hover {
   fill: #ffa62b;
 }
 
@@ -221,7 +236,7 @@ button {
   transition: transform 700ms linear;
 }
 
-.navigation__item:hover, .navigation__item:focus {
+.navigation__item:hover, .navigation__item:focus-within {
   transform: scale(1.3, 1.3);
 }
 
@@ -269,7 +284,7 @@ button {
   .nav__item {
     transition: transform 700ms linear;
   }
-  .nav__item:hover, .nav__item:focus {
+  .nav__item:hover, .nav__item:focus-within {
     transform: scale(1.3, 1.3);
   }
   .nav__link {
@@ -316,14 +331,12 @@ button {
   display: block;
   margin: 0 auto;
   margin-bottom: 25px;
-  transition: background 700ms linear;
-  transition: color 700ms linear;
-  transition: transform 700ms linear;
+  transition: background-color 700ms linear, transform 700ms linear, color 700ms linear;
 }
 
 .hero__button-get:hover, .hero__button-get:focus {
-  background: #00a0c1;
   color: #ffa62b;
+  background-color: #00a0c1;
   transform: translateY(-5px);
 }
 
@@ -334,7 +347,7 @@ button {
   display: block;
   margin: 0 auto;
   margin-bottom: 80px;
-  transition: color, background, transform 700ms linear;
+  transition: background-color 700ms linear, transform 700ms linear, color 700ms linear;
 }
 
 .hero__button-more:hover, .hero__button-more:focus {
@@ -468,6 +481,11 @@ button {
   width: 48px;
   height: 48px;
   fill: #00a0c1;
+  transition: fill 700ms linear;
+}
+
+.benefits__icon:hover, .benefits__icon:focus {
+  fill: #ffa62b;
 }
 
 .benefits__number {
@@ -590,6 +608,11 @@ button {
   height: 32px;
   fill: #ffa62b;
   margin-right: 20px;
+  transition: fill 700ms linear;
+}
+
+.about__icon:hover, .about__icon:focus {
+  fill: #00a0c1;
 }
 
 .about__item-title {
@@ -694,13 +717,12 @@ button {
   border-radius: 0 5px 5px 0;
   border-left: none;
   color: #ffffff;
-  transition: background 700ms linear;
-  transition: color 700ms linear;
+  transition: color 700ms linear, background-color 700ms linear;
 }
 
 .clients__button:hover, .clients__button:focus {
-  background: #00a0c1;
   color: #ffa62b;
+  background-color: #00a0c1;
 }
 
 @media screen and (min-width: 1080px) {

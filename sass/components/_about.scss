@@ -32,6 +32,12 @@
     height: 32px;
     fill: $third-color-icon;
     margin-right: 20px;
+    transition: fill $transition-primary;
+
+    &:hover,
+    &:focus {
+      fill: $color-hover-secondary;
+    }
   }
 
   &__item-title {

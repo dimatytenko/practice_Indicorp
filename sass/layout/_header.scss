@@ -13,11 +13,26 @@
     margin-bottom: 75px;
   }
 
+  &__logo-div {
+    transition: transform $transition-primary;
+
+    &:hover,
+    &:focus-within {
+      transform: $scale-primary;
+    }
+  }
+
   &__logo {
     color: inherit;
     font-size: 24px;
     line-height: 1.33;
     letter-spacing: 0.1px;
+    transition: color $transition-primary;
+
+    &:hover,
+    &:focus {
+      color: $color-hover-primary;
+    }
   }
 }
 // =========menu===================
@@ -32,7 +47,7 @@
     transition: transform $transition-primary;
   }
   &__item:hover,
-  &__item:focus {
+  &__item:focus-within {
     transform: $scale-primary;
   }
 
@@ -40,13 +55,15 @@
     width: 24px;
     height: 24px;
     fill: $secondary-color-icon;
-  }
-
-  &__icon {
     transition: fill $transition-primary;
   }
-  &__icon:hover,
-  &__icon:focus {
+
+  &__item:hover,
+  &__item:focus-within &__icon {
+    fill: $color-hover-primary;
+  }
+
+  &__icon:hover {
     fill: $color-hover-primary;
   }
 }
@@ -66,7 +83,7 @@
     transition: transform $transition-primary;
   }
   &__item:hover,
-  &__item:focus {
+  &__item:focus-within {
     transform: $scale-primary;
   }
   &__item:not(:last-child) {
@@ -115,7 +132,7 @@
       transition: transform $transition-primary;
     }
     &__item:hover,
-    &__item:focus {
+    &__item:focus-within {
       transform: $scale-primary;
     }
     &__link {

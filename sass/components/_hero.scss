@@ -30,15 +30,15 @@
     display: block;
     margin: 0 auto;
     margin-bottom: 25px;
-    transition: background $transition-primary;
-    transition: color $transition-primary;
-    transition: transform $transition-primary;
+    transition: background-color $transition-primary,
+      transform $transition-primary,
+      color $transition-primary;
   }
 
   &__button-get:hover,
   &__button-get:focus {
-    background: $color-hover-secondary;
     color: $color-hover-primary;
+    background-color: $color-hover-secondary;
     transform: $translate-primary;
   }
   &__button-more {
@@ -48,8 +48,9 @@
     display: block;
     margin: 0 auto;
     margin-bottom: 80px;
-    transition: color, background,
-      transform $transition-primary;
+    transition: background-color $transition-primary,
+      transform $transition-primary,
+      color $transition-primary;
   }
 
   &__button-more:hover,
