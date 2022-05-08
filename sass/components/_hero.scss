@@ -30,13 +30,15 @@
     display: block;
     margin: 0 auto;
     margin-bottom: 25px;
-    transition: color, background, transform $transition-primary;
+    transition: background $transition-primary;
+    transition: color $transition-primary;
+    transition: transform $transition-primary;
   }
 
   &__button-get:hover,
   &__button-get:focus {
-    color: $color-hover-primary;
     background: $color-hover-secondary;
+    color: $color-hover-primary;
     transform: $translate-primary;
   }
   &__button-more {
@@ -46,7 +48,8 @@
     display: block;
     margin: 0 auto;
     margin-bottom: 80px;
-    transition: color, background, transform $transition-primary;
+    transition: color, background,
+      transform $transition-primary;
   }
 
   &__button-more:hover,

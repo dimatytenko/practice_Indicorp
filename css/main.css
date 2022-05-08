@@ -40,6 +40,8 @@ ol {
   padding-left: 0;
   padding-right: 0;
   list-style: none;
+  outline: none;
+  border: none;
 }
 
 a {
@@ -191,17 +193,17 @@ button {
 }
 
 .menu-list__icon {
+  width: 24px;
+  height: 24px;
+  fill: #737373;
+}
+
+.menu-list__icon {
   transition: fill 700ms linear;
 }
 
 .menu-list__icon:hover, .menu-list__icon:focus {
   fill: #ffa62b;
-}
-
-.menu-list__icon {
-  width: 24px;
-  height: 24px;
-  fill: #737373;
 }
 
 .nav {
@@ -215,6 +217,7 @@ button {
 }
 
 .navigation__item {
+  outline: none;
   transition: transform 700ms linear;
 }
 
@@ -313,12 +316,14 @@ button {
   display: block;
   margin: 0 auto;
   margin-bottom: 25px;
-  transition: color, background, transform 700ms linear;
+  transition: background 700ms linear;
+  transition: color 700ms linear;
+  transition: transform 700ms linear;
 }
 
 .hero__button-get:hover, .hero__button-get:focus {
-  color: #ffa62b;
   background: #00a0c1;
+  color: #ffa62b;
   transform: translateY(-5px);
 }
 
@@ -649,6 +654,55 @@ button {
   margin-bottom: 30px;
 }
 
+.clients__form {
+  display: flex;
+  justify-content: center;
+}
+
+.clients__input {
+  max-width: 220px;
+  height: 58px;
+  padding: 15px 0 15px 20px;
+  background: #fafafa;
+  border: 1px solid;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.clients__input::placeholder {
+  color: #737373;
+}
+
+.clients__input:valid {
+  border-color: greenyellow;
+}
+
+.clients__input:invalid {
+  border-color: red;
+}
+
+.clients__input:placeholder-shown {
+  border-color: #e6e6e6;
+  border-right: none;
+}
+
+.clients__button {
+  max-width: 117px;
+  height: 58px;
+  background: #ffa62b;
+  border: 1px solid #e6e6e6;
+  border-radius: 0 5px 5px 0;
+  border-left: none;
+  color: #ffffff;
+  transition: background 700ms linear;
+  transition: color 700ms linear;
+}
+
+.clients__button:hover, .clients__button:focus {
+  background: #00a0c1;
+  color: #ffa62b;
+}
+
 @media screen and (min-width: 1080px) {
   .clients__list {
     flex-direction: row;
@@ -667,12 +721,19 @@ button {
     display: flex;
     justify-content: space-between;
     padding: 0 25px;
+    align-items: center;
+  }
+  .clients__subscription-title {
+    margin-bottom: 0;
   }
   .clients__back {
     max-width: 1440px;
     height: 80px;
     background-color: #252b42;
     margin: 0 auto;
+  }
+  .clients__input {
+    max-width: 333px;
   }
 }
 
