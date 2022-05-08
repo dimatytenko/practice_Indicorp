@@ -7,6 +7,7 @@ export default function getRefs() {
     modalIconCloseRef: document.querySelector('[data-action="modal-icon-close"]'),
     modalButtonSendRef: document.querySelector('[data-action="modal-button-send"]'),
     learnMoreRef: document.querySelector('[data-action="learn-more"]'),
+    learnMoreIconCloseRef: document.querySelector('[data-action="learn-more-icon-close"]'),
 
 
   };
