@@ -14,11 +14,13 @@
   }
 
   &__logo-div {
-    transition: transform $transition-primary;
+    transition: color $transition-primary,
+      transform $transition-primary;
 
     &:hover,
     &:focus-within {
       transform: $scale-primary;
+      color: $color-hover-primary;
     }
   }
 
@@ -27,12 +29,7 @@
     font-size: 24px;
     line-height: 1.33;
     letter-spacing: 0.1px;
-    transition: color $transition-primary;
-
-    &:hover,
-    &:focus {
-      color: $color-hover-primary;
-    }
+    outline: none;
   }
 }
 // =========menu===================
@@ -46,10 +43,6 @@
   &__item {
     transition: transform $transition-primary;
   }
-  &__item:hover,
-  &__item:focus-within {
-    transform: $scale-primary;
-  }
 
   &__icon {
     width: 24px;
@@ -59,6 +52,10 @@
   }
 
   &__item:hover,
+  &__item:focus-within {
+    transform: $scale-primary;
+  }
+
   &__item:focus-within &__icon {
     fill: $color-hover-primary;
   }

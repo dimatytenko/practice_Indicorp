@@ -885,72 +885,76 @@
         </svg>
       </button>
       <form class="modal__form">
-        <div class="modal__input-field">
-          <label class="modal__label" for="user-name"
-            >Name</label
+        <fieldset class="modal__fieldset">
+          <legend>info</legend>
+
+          <div class="modal__input-field">
+            <label class="modal__label" for="user-name"
+              >Name</label
+            >
+            <input
+              class="modal__input"
+              type="text"
+              name="user-name"
+              id="user-name"
+              placeholder="Djavelin"
+              minlength="3"
+              required
+              autofocus
+            />
+          </div>
+          <div class="modal__input-field">
+            <label class="modal__label" for="user-surname"
+              >Surname</label
+            >
+            <input
+              class="modal__input"
+              type="text"
+              name="user-surname"
+              id="user-surname"
+              placeholder="Bandera"
+              minlength="3"
+              required
+            />
+          </div>
+          <div class="modal__input-field">
+            <label class="modal__label" for="user-email"
+              >Email</label
+            >
+            <input
+              class="modal__input"
+              type="email"
+              name="user-email"
+              id="user-email"
+              placeholder="name@mail.com"
+              title="name@mail.com"
+            />
+          </div>
+          <div class="modal__input-field">
+            <label class="modal__label" for="user-tel"
+              >Number phone</label
+            >
+            <input
+              class="modal__input"
+              type="tel"
+              name="user-tel"
+              id="user-tel"
+              required
+              placeholder="095-666-88-99"
+              title="095-666-88-99"
+              minlength="13"
+              maxlength="13"
+              pattern="^\d{3}-\d{3}-\d{2}-\d{2}$"
+            />
+          </div>
+          <button
+            class="modal__button-send button-contacts-hero"
+            type="submit"
+            data-action="modal-button-send"
           >
-          <input
-            class="modal__input"
-            type="text"
-            name="user-name"
-            id="user-name"
-            placeholder="Djavelin"
-            minlength="3"
-            required
-            autofocus
-          />
-        </div>
-        <div class="modal__input-field">
-          <label class="modal__label" for="user-surname"
-            >Surname</label
-          >
-          <input
-            class="modal__input"
-            type="text"
-            name="user-surname"
-            id="user-surname"
-            placeholder="Bandera"
-            minlength="3"
-            required
-          />
-        </div>
-        <div class="modal__input-field">
-          <label class="modal__label" for="user-email"
-            >Email</label
-          >
-          <input
-            class="modal__input"
-            type="email"
-            name="user-email"
-            id="user-email"
-            placeholder="name@mail.com"
-            title="name@mail.com"
-          />
-        </div>
-        <div class="modal__input-field">
-          <label class="modal__label" for="user-tel"
-            >Number phone</label
-          >
-          <input
-            class="modal__input"
-            type="tel"
-            name="user-tel"
-            id="user-tel"
-            required
-            placeholder="095-666-88-99"
-            title="095-666-88-99"
-            minlength="13"
-            maxlength="13"
-            pattern="^\d{3}-\d{3}-\d{2}-\d{2}$"
-          />
-        </div>
-        <button
-          class="modal__button-send button-contacts-hero"
-          type="submit"
-          data-action="modal-button-send"
-        >
-          Send
-        </button>
+            Send
+          </button>
+        </fieldset>
       </form>
     </div>
     <!-- ======================== -->
