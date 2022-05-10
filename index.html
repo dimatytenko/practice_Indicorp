@@ -874,7 +874,7 @@
     <!-- ======================== -->
 
     <!-- Modal -->
-    <div class="modal is-hidden" data-action="modal">
+    <div class="modal" data-action="modal">
       <button
         class="button-close"
         type="button"
@@ -946,6 +946,17 @@
               maxlength="13"
               pattern="^\d{3}-\d{3}-\d{2}-\d{2}$"
             />
+          </div>
+          <div class="modal__checkbox-field">
+            <input
+              type="checkbox"
+              class="modal__checkbox visually-hidden"
+              id="checkbox-text"
+              required
+            />
+            <label for="checkbox-text" class="modal__text"
+              >Accept</label
+            >
           </div>
           <button
             class="modal__button-send button-contacts-hero"

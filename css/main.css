@@ -906,6 +906,38 @@ button {
   border: solid 1px;
   border-color: gray;
 }
+.modal__checkbox-field {
+  position: relative;
+}
+.modal__checkbox {
+  display: block;
+}
+.modal__text {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.modal__text::before {
+  content: "";
+  width: 44px;
+  height: 22px;
+  border: 2px solid #00a0c1;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+.modal__text::after {
+  position: absolute;
+  content: "";
+  width: 17px;
+  height: 17px;
+  border-radius: 50px;
+  background-color: #ffa62b;
+  left: 3px;
+  transition: transform 700ms linear;
+}
+.modal__checkbox:checked + .modal__text::after {
+  transform: translateX(20px);
+}
 .modal__button-send {
   display: block;
   margin: 0 auto;

@@ -43,6 +43,42 @@
     }
   }
 
+  &__checkbox-field {
+    position: relative;
+  }
+  &__checkbox {
+    display: block;
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__text::before {
+    content: '';
+    width: 44px;
+    height: 22px;
+    border: 2px solid $color-hover-secondary;
+    border-radius: 50px;
+    margin-right: 10px;
+  }
+
+  &__text::after {
+    position: absolute;
+    content: '';
+    width: 17px;
+    height: 17px;
+    border-radius: 50px;
+    background-color: $color-hover-primary;
+    left: 3px;
+    transition: transform $transition-primary;
+  }
+  &__checkbox:checked + &__text::after {
+    transform: translateX(20px);
+  }
+
   &__button-send {
     display: block;
     margin: 0 auto;
