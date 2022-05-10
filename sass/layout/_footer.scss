@@ -32,8 +32,17 @@
     text-align: center;
     color: $third-font-color;
     background-color: $background-button;
+    border: none;
     display: block;
     padding: 15px 40px;
+    transition: color $transition-primary;
+    transition: background-color $transition-primary;
+
+    &:hover,
+    &:focus {
+      color: $color-hover-primary;
+      background-color: $color-hover-secondary;
+    }
   }
 }
 .info-block {
@@ -85,6 +94,10 @@
     &__top {
       display: flex;
       justify-content: space-between;
+    }
+    &__btn {
+      display: flex;
+      align-items: center;
     }
     &__bottom {
       display: flex;

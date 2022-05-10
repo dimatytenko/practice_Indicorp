@@ -784,8 +784,15 @@ button {
   text-align: center;
   color: #ffffff;
   background-color: #ffa62b;
+  border: none;
   display: block;
   padding: 15px 40px;
+  transition: color 700ms linear;
+  transition: background-color 700ms linear;
+}
+.footer__btn:hover, .footer__btn:focus {
+  color: #ffa62b;
+  background-color: #00a0c1;
 }
 
 .info-block {
@@ -837,6 +844,10 @@ button {
   .footer__top {
     display: flex;
     justify-content: space-between;
+  }
+  .footer__btn {
+    display: flex;
+    align-items: center;
   }
   .footer__bottom {
     display: flex;
