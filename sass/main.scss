@@ -1,16 +1,23 @@
+@import './base/common';
+@import './base/reset';
+
 @import './utils/variables';
 @import './utils/visually-hidden';
-@import './base/common';
-@import './base/container';
-@import './base/section';
+
+@import './components/container';
+@import './components/section';
+@import './components/title';
+@import './components/paragraph';
+@import './components/buttons';
+@import './components/backdrop';
+@import './components/modal';
+@import './components/learn-more';
+
 @import './layout/header';
-@import './components/hero';
-@import './components/benefits';
-@import './components/advice';
-@import './components/about';
-@import './components/clients';
-@import './components/contacts';
+@import './layout/hero';
+@import './layout/benefits';
+@import './layout/advice';
+@import './layout/about';
+@import './layout/clients';
+@import './layout/contacts';
 @import './layout/footer';
-@import './layout/_backdrop';
-@import './layout/modal';
-@import './layout/learn-more';

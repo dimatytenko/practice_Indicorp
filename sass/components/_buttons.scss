@@ -1,0 +1,52 @@
+.button-hero {
+  padding: 10px 36px;
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 0.2px;
+  border-radius: 37px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+.button-contacts-hero {
+  padding: 10px 20px;
+  color: $color-secondary-button;
+  font-weight: 600;
+  border: 1px solid $third-color-icon;
+  border-radius: 5px;
+  background: transparent;
+}
+
+// ===== button-close==========
+
+.button-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color $transition-primary;
+
+  &:hover,
+  &:focus {
+    background-color: $color-hover-secondary;
+  }
+
+  &__icon-close {
+    width: 20px;
+    height: 20px;
+    fill: $secondary-color-icon;
+    transition: fill $transition-primary;
+  }
+
+  &:hover &__icon-close {
+    fill: $color-hover-primary;
+  }
+}
