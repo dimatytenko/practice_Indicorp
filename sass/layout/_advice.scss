@@ -33,6 +33,10 @@
     font-weight: 500;
     line-height: 1.43;
   }
+
+  &__item-img {
+    // max-width: 100%;
+  }
 }
 @media screen and (min-width: 1080px) {
   .advice {

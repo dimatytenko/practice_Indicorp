@@ -1,6 +1,6 @@
 .footer {
   &__top {
-    padding: 40px 0;
+    padding: 40px 56px;
   }
 
   &__center {
@@ -16,6 +16,9 @@
     font-weight: 600;
     color: $second_font-color;
     text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
   }
   &__title {
     font-size: 24px;
@@ -46,13 +49,47 @@
   }
 }
 .info-block {
-  padding: 50px 0;
+  padding: 50px 0px 50px 35px;
   &__title {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.1px;
     color: $third-font-color;
     margin-bottom: 20px;
+    @media (max-width: 1080px) {
+      position: relative;
+      cursor: pointer;
+
+      &::after,
+      &::before {
+        content: '';
+        width: 15px;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        cursor: pointer;
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+        left: -20px;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+      }
+      &::before {
+        transform: rotate(45deg);
+        left: -30px;
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+      }
+    }
+  }
+
+  &__list {
+    @media screen and (max-width: 1080px) {
+      display: none;
+    }
   }
   &__item + &__item {
     margin-top: 10px;
