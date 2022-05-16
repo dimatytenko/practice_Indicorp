@@ -980,6 +980,18 @@ main {
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
   }
+  .info-block__title.active {
+    color: #000;
+  }
+  .info-block__title.active:before, .info-block__title.active:after {
+    background-color: #000;
+  }
+  .info-block__title.active:before {
+    transform: rotate(-45deg);
+  }
+  .info-block__title.active:after {
+    transform: rotate(45deg);
+  }
 }
 @media screen and (max-width: 1080px) {
   .info-block__list {

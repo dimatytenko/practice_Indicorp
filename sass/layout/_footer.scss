@@ -77,11 +77,29 @@
         border-top-right-radius: 50%;
         border-bottom-right-radius: 50%;
       }
+
       &::before {
         transform: rotate(45deg);
         left: -30px;
         border-top-left-radius: 50%;
         border-bottom-left-radius: 50%;
+      }
+
+      &.active {
+        color: #000;
+      }
+
+      &.active:before,
+      &.active:after {
+        background-color: #000;
+      }
+
+      &.active:before {
+        transform: rotate(-45deg);
+      }
+
+      &.active:after {
+        transform: rotate(45deg);
       }
     }
   }
