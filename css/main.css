@@ -951,6 +951,7 @@ main {
   padding: 50px 0px 50px 35px;
 }
 .info-block__title {
+  display: inline-block;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.1px;
@@ -970,6 +971,7 @@ main {
     position: absolute;
     top: 50%;
     cursor: pointer;
+    transition: all 0.5s ease 0s;
   }
   .info-block__title::after {
     transform: rotate(-45deg);
@@ -984,6 +986,7 @@ main {
     border-bottom-left-radius: 50%;
   }
   .info-block__title.active {
+    transition: all 0.5s ease 0s;
     color: #000;
   }
   .info-block__title.active:before, .info-block__title.active:after {
@@ -999,6 +1002,9 @@ main {
 @media screen and (max-width: 1080px) {
   .info-block__list {
     display: none;
+  }
+  .info-block__list.active {
+    display: block;
   }
 }
 .info-block__item + .info-block__item {

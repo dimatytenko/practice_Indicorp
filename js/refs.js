@@ -25,5 +25,12 @@ export default function getRefs() {
       '[data-action="learn-more-icon-close"]',
     ),
     bodyRef: document.querySelector('body'),
+    spollerBlockRef: document.querySelector('.info-block'),
+    spollerTitleRef: document.querySelectorAll(
+      '.info-block__title',
+    ),
+    spollerListRef: document.querySelectorAll(
+      '.info-block__list',
+    ),
   };
 }
