@@ -41,21 +41,22 @@ export function onCloseLearnMore() {
 // ===== spoller ==== //
 
 spollerBlockRef.addEventListener('click', function (e) {
-  if (!e.target.nodeName === 'H3') {
+  const targetTitle = e.target;
+  const targetLink = e.target.nextElementSibling;
+
+  if (targetTitle.nodeName !== 'H3') {
     return;
   } else {
     if (spollerBlockRef.classList.contains('one')) {
-      if (!e.target.classList.contains('active')) {
+      if (!targetTitle.classList.contains('active')) {
         [...spollerTitleRef].map(link =>
           link.classList.remove('active'),
         );
         [...spollerListRef].map(link =>
           link.classList.remove('active'),
         );
-        e.target.classList.toggle('active');
-        e.target.nextElementSibling.classList.toggle(
-          'active',
-        );
+        targetTitle.classList.toggle('active');
+        targetLink.classList.toggle('active');
       } else {
         [...spollerTitleRef].map(link =>
           link.classList.remove('active'),
@@ -65,10 +66,8 @@ spollerBlockRef.addEventListener('click', function (e) {
         );
       }
     } else {
-      e.target.classList.toggle('active');
-      e.target.nextElementSibling.classList.toggle(
-        'active',
-      );
+      targetTitle.classList.toggle('active');
+      targetLink.classList.toggle('active');
     }
   }
 });
