@@ -49,26 +49,33 @@ spollerBlockRef.addEventListener('click', function (e) {
   } else {
     if (spollerBlockRef.classList.contains('one')) {
       if (!targetTitle.classList.contains('active')) {
-        [...spollerTitleRef].map(link =>
-          link.classList.remove('active'),
-        );
-        [...spollerListRef].map(link =>
-          link.classList.remove('active'),
-        );
-        targetTitle.classList.toggle('active');
-        targetLink.classList.toggle('active');
+        removeAllActiveClass(spollerTitleRef);
+        removeAllActiveClass(spollerListRef);
+        toggleActiveClass();
       } else {
-        [...spollerTitleRef].map(link =>
-          link.classList.remove('active'),
-        );
-        [...spollerListRef].map(link =>
-          link.classList.remove('active'),
-        );
+        removeActiveClass();
       }
     } else {
-      targetTitle.classList.toggle('active');
-      targetLink.classList.toggle('active');
+      toggleActiveClass();
     }
+  }
+
+  function removeActiveClass() {
+    [...spollerTitleRef].map(link =>
+      link.classList.remove('active'),
+    );
+    [...spollerListRef].map(link =>
+      link.classList.remove('active'),
+    );
+  }
+
+  function toggleActiveClass() {
+    targetTitle.classList.toggle('active');
+    targetLink.classList.toggle('active');
+  }
+
+  function removeAllActiveClass(array) {
+    [...array].map(link => link.classList.remove('active'));
   }
 });
 
