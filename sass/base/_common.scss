@@ -14,6 +14,9 @@ body {
   line-height: 1.71;
   background-color: $primary-backgroun-section;
 }
+body.lock {
+  overflow: hidden;
+}
 main {
   flex: 1 1 auto;
 }

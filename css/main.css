@@ -56,6 +56,10 @@ body {
   background-color: #fafafa;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 main {
   flex: 1 1 auto;
 }
@@ -282,7 +286,6 @@ main {
   z-index: 50;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #fafafa;
 }
 .header .container {
   padding-top: 40px;
