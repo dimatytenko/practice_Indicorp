@@ -59,8 +59,12 @@ spollerBlockRef.addEventListener('click', function (e) {
   );
 
   if (activeTitle) {
-    removeActiveClass();
-    addActiveClass();
+    if (e.target === activeTitle) {
+      toggleActiveClass();
+    } else {
+      removeActiveClass();
+      addActiveClass();
+    }
   } else {
     addActiveClass();
   }

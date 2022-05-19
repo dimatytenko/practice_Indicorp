@@ -1001,10 +1001,15 @@ main {
 }
 @media screen and (max-width: 1080px) {
   .info-block__list {
+    transition: all 2s ease 0s;
     display: none;
+    visibility: hidden;
+    opacity: 0;
   }
   .info-block__list.active {
     display: block;
+    visibility: visible;
+    opacity: 1;
   }
 }
 .info-block__item + .info-block__item {
