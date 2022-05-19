@@ -46,27 +46,23 @@ spollerBlockRef.addEventListener('click', function (e) {
 
   if (targetTitle.nodeName !== 'H3') {
     return;
-  } else {
-    if (spollerBlockRef.classList.contains('one')) {
-      if (!targetTitle.classList.contains('active')) {
-        removeAllActiveClass(spollerTitleRef);
-        removeAllActiveClass(spollerListRef);
-        toggleActiveClass();
-      } else {
-        removeActiveClass();
-      }
-    } else {
-      toggleActiveClass();
-    }
+  }
+  if (!spollerBlockRef.classList.contains('one')) {
+    toggleActiveClass();
   }
 
-  function removeActiveClass() {
-    [...spollerTitleRef].map(link =>
-      link.classList.remove('active'),
-    );
-    [...spollerListRef].map(link =>
-      link.classList.remove('active'),
-    );
+  const activeTitle = document.querySelector(
+    '.info-block__title.active',
+  );
+  const activeList = document.querySelector(
+    '.info-block__list.active',
+  );
+
+  if (activeTitle) {
+    removeActiveClass();
+    addActiveClass();
+  } else {
+    addActiveClass();
   }
 
   function toggleActiveClass() {
@@ -74,8 +70,14 @@ spollerBlockRef.addEventListener('click', function (e) {
     targetLink.classList.toggle('active');
   }
 
-  function removeAllActiveClass(array) {
-    [...array].map(link => link.classList.remove('active'));
+  function removeActiveClass() {
+    activeTitle.classList.remove('active');
+    activeList.classList.remove('active');
+  }
+
+  function addActiveClass() {
+    targetTitle.classList.add('active');
+    targetLink.classList.add('active');
   }
 });
 
